@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Momdn Zalabany -- CEO -- @alzalabany
+    Ahmed Kassem   -- sales manager -- @kassem
+
+# THANKS
+
+    SimpleInformatics team
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, Angularjs, Material, jQuery, Modernizr, Normalize.css

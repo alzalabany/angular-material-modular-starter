@@ -1,0 +1,46 @@
+<div ng-controller="loginCtrl as login" layout="column" layout-align="center center" layout-fill="layout-fill">
+  <div layout="column" class="loginBox md-whiteframe-z1">
+    <md-toolbar>
+      <h2 class="md-toolbar-tools"><span>Login</span></h2>
+    </md-toolbar>
+
+	<md-list ng-show="login.success">
+
+		<md-list-item>
+			<ng-md-icon options='{"rotation": "counterclock"}' icon="{{login.success.icon || 'access_time'}}" style="fill: {{login.success.color||'green'}}" size="64" ></ng-md-icon>
+			<p class="md-title">{{login.success.msg}}</p>
+		</md-list-item>
+
+		<md-list-item layout-sm="column" layout-align="space-around" ng-hide="login.pageready">
+			<md-progress-circular md-mode="indeterminate"></md-progress-circular>
+		</md-list-item>
+    	
+    </md-list>
+
+    <md-content layout="column" class="md-padding">
+      <md-input-container>
+        <label>Username</label>
+        <input type="text" ng-model="login.username"/>
+      </md-input-container>
+      <md-input-container>
+        <label>Password</label>
+        <input type="password" ng-model="login.password"/>
+      </md-input-container>
+      <div layout="row" layout-align="center center" style="padding-top:20px;">
+        <md-button class="md-raised md-primary" ng-click="login.login()">Login</md-button>
+        <div flex="flex"></div>
+        <md-button href="" md-no-ink="md-no-ink">Forgot Password</md-button>
+      </div>
+    </md-content>
+  </div>
+</div>
+<style type="text/css">
+	.loginBox {
+	  max-width:  90%;
+	  width: 500px
+	}
+
+	.stretch input  {
+	  width: 100%
+	}
+</style>
